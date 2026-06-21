@@ -1,0 +1,16 @@
+*.bak
+.idea
+*.*~
+*~
+__pycache__/
+vent/
+venv/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+env/
+build/
+develop-eggs/
+dist/
