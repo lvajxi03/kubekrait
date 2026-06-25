@@ -36,6 +36,12 @@ class Krait:
         self.core = client.CoreV1Api(self.api)
         self.apps = client.AppsV1Api(self.api)
 
+    def get_nodes(self):
+        """
+        Get all nodes in the cluster
+        """
+        return self.core.list_node().items
+
     def get_namespaces(self):
         """
         Get all namespaces in the cluster
@@ -53,3 +59,9 @@ class Krait:
         Get all pods in the cluster
         """
         return self.core.list_pod_for_all_namespaces().items
+
+    def get_configmaps(self, namespace):
+        """
+        Get all configmaps in a given namespace
+        """
+        return self.core.list_namespaced_config_map(namespace).items

@@ -5,7 +5,7 @@ Krait UI module
 """
 
 import curses
-from .ui import MainWindow
+from .ui import MainWindow, AboutWindow
 
 
 def main(stdscr):
@@ -15,6 +15,8 @@ def main(stdscr):
     curses.curs_set(0)  # Hide the cursor
     main_window = MainWindow()
     main_window.show()
+    about_window = AboutWindow()
+    about_window.show()
     stdscr.getch()  # Wait for user input
 
 

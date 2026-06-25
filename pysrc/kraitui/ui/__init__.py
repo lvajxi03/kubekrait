@@ -6,7 +6,7 @@ Krait UI module initialization
 
 
 import curses
-from .windows import MainWindow
+from .windows import MainWindow, AboutWindow
 
 
 curses.initscr()
